@@ -8,6 +8,8 @@ class Car(models.Model):
         # 'introduction_to_models.Manufacturer'
         'Manufacturer',
         on_delete=models.CASCADE,
+        related_name='cars',
+        related_query_name='manufacturer_car',
     )
 
     def __str__(self):
